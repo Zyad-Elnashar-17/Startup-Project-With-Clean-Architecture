@@ -66,17 +66,17 @@ The project is now built on a solid foundation that is:
 Follow these steps to get the API up and running using **Visual Studio**:
 
 ### 1. Prerequisites
-* **Visual Studio 2022** (latest update).
+* **Visual Studio 2026** (latest update).
 * **.NET 8 SDK**.
 * **SQL Server** (LocalDB or Express).
 
 ### 2. Database Configuration
 1. Open `appsettings.json` in the **Api** project.
-2. Update the `ConnectionStrings:DefaultConnection` with your local SQL Server instance details.
+2. Update the `ConnectionStrings` with your local SQL Server instance details.
 
 ### 3. Apply Migrations (Via Package Manager Console)
 1. Open **Package Manager Console** in Visual Studio (Tools > NuGet Package Manager > Package Manager Console).
 2. Set the **Default Project** in the dropdown to `Infrastructure`.
 3. Run the following command:
    ```powershell
-   Update-Database -StartupProject Api
+   Update-Database
