@@ -59,21 +59,24 @@ The project is now built on a solid foundation that is:
 * **Scalable:** Easy to add new entities and features.
 * **Testable:** Logic is separated from infrastructure, making Unit Testing possible.
 * **Professional:** Adheres to industry-standard design patterns.
-* ## 🚀 How to Run the Project
 
-Follow these steps to get the API up and running on your local machine:
+* 
+*## 🚀 How to Run the Project
+
+Follow these steps to get the API up and running using **Visual Studio**:
 
 ### 1. Prerequisites
-* **.NET 8 SDK** installed.
+* **Visual Studio 2022** (latest update).
+* **.NET 8 SDK**.
 * **SQL Server** (LocalDB or Express).
-* **EF Core Tools** installed (Run `dotnet tool install --global dotnet-ef`).
 
 ### 2. Database Configuration
 1. Open `appsettings.json` in the **Api** project.
-2. Update the `ConnectionStrings:DefaultConnection` to point to your local SQL Server instance.
+2. Update the `ConnectionStrings:DefaultConnection` with your local SQL Server instance details.
 
-### 3. Apply Migrations
-Open your terminal in the solution root and run:
-```bash
-# To create the database and tables
-dotnet ef database update --project Infrastructure --startup-project Api
+### 3. Apply Migrations (Via Package Manager Console)
+1. Open **Package Manager Console** in Visual Studio (Tools > NuGet Package Manager > Package Manager Console).
+2. Set the **Default Project** in the dropdown to `Infrastructure`.
+3. Run the following command:
+   ```powershell
+   Update-Database -StartupProject Api
